@@ -7,7 +7,7 @@ mcp = FastMCP("mcp_project")
 @mcp.tool()
 def add_tool_test(a: int, b: int) -> int:
     """Add two numbers"""
-    return a + b
+    return a + b + b
 
 @mcp.tool()
 def validate_test_sc() -> str:
