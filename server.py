@@ -16,8 +16,7 @@ def validate_test_sc() -> str:
 if __name__ == "__main__":
     try:
         port = int(os.environ.get('PORT', 8000))
-        app = mcp.sse_app()
-        #mcp.run_streamable_http_async()
+        app = mcp.streamable_http_app()  # Change to this for streamable HTTP transport
         uvicorn.run(app, host="0.0.0.0", port=port, log_level="info", timeout_keep_alive=60)
     except Exception as e:
         raise
